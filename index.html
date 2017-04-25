@@ -1,173 +1,47 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
- 
-<head>
-<title>Delphic</title>
-<meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="style.css" media="all" />
-<!--[if IE 7]><link rel="stylesheet" type="text/css" href="style/css/ie7.css" media="all" /><![endif]-->
-<script type="text/javascript" src="style/js/jquery-1.5.min.js"></script>
-<script type="text/javascript" src="style/js/ddsmoothmenu.js"></script>
-<script type="text/javascript" src="style/js/scripts.js"></script>
-<script type="text/javascript" src="scripts/swfobject/swfobject.js"></script>
-<script type="text/javascript">
-var flashvars = {};
-flashvars.cssSource = "piecemaker.css";
-flashvars.xmlSource = "piecemaker.xml";
-var params = {};
-params.play = "true";
-params.menu = "false";
-params.scale = "showall";
-params.wmode = "transparent";
-params.allowfullscreen = "true";
-swfobject.embedSWF('piecemaker.swf', 'piecemaker', '960', '450', '10', null, flashvars, params, null);
-</script>
-    <!--нужное место -->
-   < script type="text/javascript" 
-src="https://www.google.com/jsapi">
-  
-  google.load("visualization", "1.1", 
-{packages:["wordtree"]});
- google.setOnLoadCallback(drawChart);
- function drawChart() {
- var data = google.visualization.arrayToDataTable(
- [ ['Фразы'],
- ['кот друг собаки'],
- ['кот друг человека'],
- ['кот любит мяукать'],
- ['кот любит спать утром'],
- ['кот любит спать днем'],
- ['кот любит прыгать'],
- ['кот любит есть колбасу'],
- ['кот любит есть конфеты'],
- ['кот любит есть мышей'],
- ['кот любит лазить в окно'],
- ['кот любит лазить в шкаф'],
- ['кот любит лазить на дерево'],
- ['кот любит лазить на забор'],
- ['кот любит пить молоко'],
- ['кот любит пить лимонад'],
- ['кот гуляет днем'],
- ['кот гуляет вечером'],
- ['кот живет с человеком'],
- ['кот живет долго'],
- ['кот гуляет ночью'],
- ['кот гуляет ночью один'],
- ]
- );
- var options = {
-maxFontSize: 14,
- wordtree: {
- format: 'implicit',
- word: 'кот'
- }
- };
- var chart = new google.visualization.WordTree
-(document.getElementById('wordtree_basic'));
- chart.draw(data, options);
- }
-  
-  </script>
-</head>
-<body>
-  <!--нужное место -->
-<div id="wordtree_basic" style="width: 100%; 
-height: 500px;"></div>
-  
-<div id="container">
-  <!-- Begin Header Wrapper -->
-  <div id="page-top">
-    <div id="header-wrapper">
-      <!-- Begin Header -->
-      <div id="header">
-        <div id="logo"><a href="index.html"><img src="style/images/logo.png" alt="" /></a></div>
-        <!-- Logo -->
-        <!-- Begin Menu -->
-        <div id="menu-wrapper">
-          <div id="smoothmenu1" class="ddsmoothmenu">
-            <ul>
-              <li><a href="index.html" class="selected">Home</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="full-width.html">Others</a>
-                <ul>
-                  <li><a href="full-width.html">Full Width Page</a></li>
-                  <li><a href="buttons.html">Buttons</a></li>
-                </ul>
-              </li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-        <!-- End Menu -->
-      </div>
-      <!-- End Header -->
-    </div>
-  </div>
-  <!-- End Header Wrapper -->
-  <!-- Begin Slider -->
-  <div id="piecemaker-container">
-    <div id="piecemaker">
-      <p>Put your alternative Non Flash content here.</p>
-    </div>
-  </div>
-  <!-- End Slider -->
-  <!-- Begin Wrapper -->
-  <div id="wrapper">
-    <!-- Begin Intro -->
-    <div class="intro">
-      <h1>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium. Praesent urna urna, venenatis at ultrices ac, viverra in turpis. Duis sceler isque mauri sut metus. </h1>
-    </div>
-    <!-- End Intro -->
-    <!-- Begin About -->
-    <div id="about">
-      <div class="one-fourth"><a href="#"><img src="style/images/art/home-1.jpg" alt="" /></a>
-        <h4>Phasellus Risus Quam</h4>
-        <p>Morbi non nunc nec ipsum tincidunt luctus aliquam vel nisi. Donec eu accumsan elit.</p>
-      </div>
-      <div class="one-fourth"><a href="#"><img src="style/images/art/home-2.jpg" alt="" /></a>
-        <h4>Maecenas Tincidunt</h4>
-        <p>Nulla facilisi. Aenean porttitor cursus aliquet. Praesent sit amet dictum lacus. Risus eget augue.</p>
-      </div>
-      <div class="one-fourth"><a href="#"><img src="style/images/art/home-3.jpg" alt="" /></a>
-        <h4>Pellentesque suscipit</h4>
-        <p>Vivamus placerat viverra posuere. Duis quis luctus diam. Aliquam a mi id vel orci lectus.</p>
-      </div>
-      <div class="one-fourth last"><a href="#"><img src="style/images/art/home-4.jpg" alt="" /></a>
-        <h4>Donec Eust Adipiscing</h4>
-        <p>Sed eu lorem sed lectus interdum vehicula. Praesent sit amet risus eget augue semper.</p>
-      </div>
-    </div>
-    <!-- End About -->
-  </div>
-  <!-- End Wrapper -->
-  <div class="clearfix"></div>
-  <div class="push"></div>
-  <!-- Begin Footer -->
-  <div id="footer-wrapper">
-    <div id="footer">
-      <div id="footer-content">
-        <!-- Begin Copyright -->
-        <div id="copyright">
-          <p>Copyright &copy; <a href="#">Domain Name</a> - All Rights Reserved | Design By <a target="_blank" href="http://elemisfreebies.com/">elemis</a></p>
-        </div>
-        <!-- End Copyright -->
-        <!-- Begin Social Icons -->
-        <div id="socials">
-          <ul>
-            <li><a href="#"><img src="style/images/icon-rss.png" alt="" /></a></li>
-            <li><a href="#"><img src="style/images/icon-twitter.png" alt="" /></a></li>
-            <li><a href="#"><img src="style/images/icon-dribble.png" alt="" /></a></li>
-            <li><a href="#"><img src="style/images/icon-tumblr.png" alt="" /></a></li>
-            <li><a href="#"><img src="style/images/icon-flickr.png" alt="" /></a></li>
-            <li><a href="#"><img src="style/images/icon-facebook.png" alt="" /></a></li>
-          </ul>
-        </div>
-        <!-- End Social Icons -->
-      </div>
-    </div>
-  </div>
-  <!-- End Footer -->
-</div>
-</body>
+<html> 
+<head> 
+<script type="text/javascript" src="https://www.google.com/jsapi"></script> 
+<script type="text/javascript"> 
+google.load("visualization", "1.1", {packages:["wordtree"]}); 
+google.setOnLoadCallback(drawChart); 
+function drawChart() { 
+var data = google.visualization.arrayToDataTable( 
+[ ['Фразы'], 
+['устройство планшет сенсорный'], 
+['устройство планшет универсальный'], 
+['устройство планшет сотовая связь'],
+['устройство планшет съемка фото'], 
+['устройство планшет съемка видео'],
+['устройство компьютер функциональный'],   
+['устройство компьютер много шум'], 
+['устройство компьютер много места'], 
+['устройство компьютер много электроенергии'], 
+['устройство компьютер много пыли'], 
+['устройство компьютер ремонт дешевле'], 
+['устройство компьютер ремонт легче'], 
+['устройство компьютер ремонт быстрее'],  
+['устройство смартфон компактный'], 
+['устройство смартфон удобный'], 
+['устройство смартфон сенсорный'],
+['устройство смартфон сотовая связь'],
+['устройство смартфон съемка фото'], 
+['устройство смартфон съемка видео']
+] 
+); 
+var options = { 
+maxFontSize: 14, 
+backgroundColor: '#F7F7F7', 
+wordtree: { 
+format: 'implicit', 
+word: 'устройство' 
+} 
+}; 
+var chart = new google.visualization.WordTree(document.getElementById('wordtree_basic')); 
+chart.draw(data, options); 
+} 
+</script> 
+</head> 
+<body> 
+<div id="wordtree_basic" style="margin-bottom:10px;"></div> 
+</body> 
 </html>
