@@ -27,9 +27,8 @@
 	<script src="js/jquery.flip.min.js"></script>
 	<script src="js/main.js"></script>	
 	<script type="text/javascript" src="js/fancybox/jquery.fancybox.pack.js?v=2.0.4"></script>
-</head>
-<body>
-	 <script type="text/javascript" src="https://www.google.com/jsapi"></script> 
+	
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script> 
 <script type="text/javascript"> 
 google.load("visualization", "1.1", {packages:["wordtree"]}); 
 google.setOnLoadCallback(drawChart); 
@@ -63,7 +62,10 @@ word: 'Фитнес-программа'
 var chart = new google.visualization.WordTree(document.getElementById('wordtree_basic')); 
 chart.draw(data, options); 
 } 
-</script>			
+</script> 
+</head>
+<body>
+	<div id="wordtree_basic" style="margin-bottom:1000px;"></div> 		
 	<div class="background_overlay">
 		<div class="background">
 		
