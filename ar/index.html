@@ -1,13 +1,42 @@
-<!-- include A-Frame obviously добавили файл скрипта 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>A-Frame dodecahedron</title>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+  </head>
+  <body>
+        
+    <a-scene background="color:black">
+
+      
+     <!--  <a-entity
+                geometry="primitive:sphere; radius:1;"
+                material="color:lightgrey; emissive:lightgrey"
+                position="4 4 -4"
+                ></a-entity> 
+				<!-- include A-Frame obviously добавили файл скрипта 
 для выполнения кадра а-фрейм  - это способ сделать веб интерфейс виртуальным, а затем использовать драматичекие цели
-аугментатор кадров снова TJS-->
+аугментатор кадров снова TJS
 <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
-<!-- include ar.js for A-Frame -->
+<!-- include ar.js for A-Frame 
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 <body style='margin : 0px; overflow: hidden;'>
   <a-scene embedded arjs>
-    <!-- create your content here. just a box for now -->
-    <a-dodecahedron position="0 0.5 0" color="yellow" radius="0.5"
+    <!-- create your content here. just a box for now 
+    <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
+    <!-- define a camera which will move according to the marker position 
+    <a-marker-camera preset='hiro'></a-marker-camera>
+  </a-scene>
+</body>
+				
+				
+				
+				-->
+      
+      
+      
+      <a-dodecahedron position="-1 0 -4" color="yellow" radius="0.5"
              shadow="cast:true;">      
                <a-animation attribute="rotation"
                dur="3000"
@@ -17,17 +46,43 @@
 			    emissive="lightgrey"
                ></a-animation>
       </a-dodecahedron>
-     
+	 
+     <a-dodecahedron position="-4 0 -4" color="yellow" radius="0.5"
+             shadow="cast:true;">
+      
+               <a-animation attribute="rotation"
+               dur="3000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite"
+               ></a-animation>
+      </a-dodecahedron> 
     <a-plane
-         width="0.5"
-         height="0.5"
+         width="40"
+         height="40"
          color="tan"
-         position="0 0.5 0"
+         position="1.2 -1 4"
          rotation="-90 0 0"
          shadow="receive:true;"
-         ></a-plane>     
+         ></a-plane>      
+      
+      <a-sphere
+          radius="1"
+          position="4 4 -4"
+          color="lightgrey"
+          emissive="lightgrey"
+       ></a-sphere>
+      <a-entity
+                light="type:point; castShadow:true; color:gray; intensity:1.0; distance: 50"
+                position="6 6 -4"
+                ></a-entity>
       
       
-    <a-marker-camera preset='hiro'></a-marker-camera>
-  </a-scene>
-</body>
+    </a-scene>
+    
+    
+    
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>    
+  </body>
+</html>
