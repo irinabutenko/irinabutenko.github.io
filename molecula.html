@@ -1,0 +1,29 @@
+ <!doctype HTML>
+      <html>
+        <head>
+          <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+          <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
+          <title>
+          Молекула 
+          </title>
+        </head>
+        <body>
+          <a-scene>
+              <a-marker id="mymarker" preset="hiro">
+      <!-- our basic planets, these are not to scale in any way-->
+            <a-sphere id="sun" position="-13 2 -10" radius="4" color="#F5C85D"></a-sphere>
+            <a-sphere id="mercury" position="-7 2 -10" radius=".25" color="#AF886D"></a-sphere>
+            <a-sphere id="venus" position="-5 2 -10" radius=".5" color="#ECBFBF"></a-sphere>
+            <a-sphere id="mars" position="-1 2 -10" radius=".25" color="#CF503A"></a-sphere>
+
+            <!--notice this one doens't have a radius? If you don't specify one,
+            A-Frame uses the default, which is 1 -->
+            <a-sphere id="jupiter" position="1 2 -10" color="#C9957A"></a-sphere>
+            <a-sphere id="pluto" position="13 2 -10" radius=".10" color="#BFCFD4"></a-sphere>
+
+            
+              </a-marker>
+              <a-entity camera></a-entity>
+         </a-scene>
+        </body>
+      </html>
