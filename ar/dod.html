@@ -1,43 +1,22 @@
 <!-- AR.js by @jerome_etienne - github: https://github.com/jeromeetienne/ar.js - info: https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf -->
 <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
-<body style="margin : 0px; overflow: hidden;">
-  <a-scene embedded arjs>
-     <a-camera>
-    <a-dodecahedron
-      position="-1 0 -4"
-      color="yellow"
-      radius="0.5"
-      shadow="cast:true;"
-    >
-      <a-animation
-        attribute="rotation"
-        dur="3000"
-        fill="forwards"
-        to="0 360 0"
-        repeat=" idefinite"
-        emmissive="lightgrey"
-      ></a-animation>
-    </a-dodecahedron>
-    <a-plane
-      width="4"
-      height="25"
-      color="tan"
-      position="-1.2 -1 4"
-      rotation="-90 1 0"
-      shadow="receive:true;"
-    ></a-plane>
-    <a-entity
-      light="type:point;
-                       castShadow:true;
-                       color:gray;
-                       intensity:1.0
-                       distance: 50"
-      position="6 6 -4"
-    >
-    </a-entity>
- 
-    <a-marker-camera preset="hiro"></a-marker-camera>
-        </a-camera>
-  </a-scene>
+<body style='margin : 0px; overflow: hidden;'>
+	<a-scene embedded arjs='sourceType: webcam;'>
+		 <a-dodecahedron position="0 0.5 0" 
+                     scale="0.5 0.5 0.5" 
+                     material="color: red; opacity: 0.9">
+    </a-dodecahedron>   
+    
+    <a-animation attribute="rotation"
+               dur="3000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite"
+			    emissive="lightgrey"
+               ></a-animation>
+		<a-marker-camera preset='hiro'></a-marker-camera>
+      
+  </a-camera>
+	</a-scene>
 </body>
